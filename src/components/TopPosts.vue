@@ -1,0 +1,3 @@
+<template>
+  Top Posts
+</template>
