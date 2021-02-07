@@ -6,10 +6,10 @@ module.exports = {
       colors: {
         'hn-orange': '#ff6600'
       }
-    },
+    }
   },
   variants: {
-    extend: {},
+    extend: {}
   },
-  plugins: [],
-}
+  plugins: []
+};
