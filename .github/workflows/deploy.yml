@@ -1,0 +1,23 @@
+name: merge-requests
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  merge-requests:
+    name: Merge Request
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Check
+      uses: ./.github/actions/check
+    - name: Build
+      uses: ./.github/actions/build
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist

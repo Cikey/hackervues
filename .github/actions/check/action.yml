@@ -1,0 +1,5 @@
+name: Check
+description: Runs linters und tests
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
