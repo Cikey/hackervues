@@ -1,3 +1,4 @@
+import 'es6-promise/auto';
 import { createApp } from 'vue';
 import { createRouter, createWebHashHistory } from 'vue-router';
 import App from './App.vue';
@@ -6,6 +7,7 @@ import NewPosts from './components/NewPosts.vue';
 import ShowPosts from './components/ShowPosts.vue';
 import AskPosts from './components/AskPosts.vue';
 import './assets/style.css';
+import store from './store';
 
 const routes = [
   { path: '/', component: TopPosts },
@@ -22,4 +24,5 @@ const router = createRouter({
 
 createApp(App)
   .use(router)
+  .use(store)
   .mount('#app');

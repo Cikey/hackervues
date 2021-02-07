@@ -20,6 +20,12 @@ module.exports = {
   plugins: ['vue', 'prettier'],
   rules: {
     'prettier/prettier': ['error'],
-    'vue/singleline-html-element-content-newline': 'off'
+    'vue/singleline-html-element-content-newline': 'off',
+    'no-param-reassign': [
+      'error',
+      {
+        ignorePropertyModificationsFor: ['state']
+      }
+    ]
   }
 };
